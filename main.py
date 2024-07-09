@@ -94,6 +94,7 @@ class AkaneBot(commands.Cog):
 
 client = commands.Bot(command_prefix="!", intents=intents)
 
+# load the token for the bot
 def load_config(filename='config.json'):
     try:
         with open(filename, 'r') as f:
