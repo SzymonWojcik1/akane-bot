@@ -5,6 +5,7 @@ import asyncio
 from utils.file_utils import load_config
 from cogs.waifu_gamble import Waifu
 from cogs.pokemon_gamble import PokemonPacks
+from cogs.help import Help
 
 
 
@@ -18,6 +19,7 @@ async def main():
 
     await client.add_cog(PokemonPacks(client))
     await client.add_cog(Waifu(client))
+    await client.add_cog(Help(client))
 
     await client.start(discord_token)
 
