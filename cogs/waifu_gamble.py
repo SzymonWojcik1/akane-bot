@@ -24,6 +24,15 @@ class Waifu(commands.Cog):
     @commands.command()
     @commands.cooldown(1, 180, commands.BucketType.user)
     async def waifu(self, ctx):
+        # Charger les données des waifus
+        users_waifus = load_data('data/users_waifus.json')
+
+        # Vérifier si l'utilisateur est dans la base de données
+        user_id = str(ctx.author)
+        if user_id not in users_waifus:
+            await ctx.reply(f"{ctx.author.name}, tu n'es pas encore dans la base de données des waifus. Utilise `!joinwaifu` pour rejoindre !")
+            return
+
         # Charger les tokens depuis config.json
         config = load_config()
         waifu_token = config.get('waifu_token')
