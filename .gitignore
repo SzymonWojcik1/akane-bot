@@ -1,1 +1,4 @@
 config.json
+
+# ignore venv folder
+venv/
