@@ -2,3 +2,6 @@ config.json
 
 # ignore venv folder
 venv/
+
+# ignore files in data
+data/*
