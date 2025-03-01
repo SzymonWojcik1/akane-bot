@@ -4,7 +4,7 @@ from discord.ext import commands
 from discord.ext.commands import CommandOnCooldown
 from utils.config_loader import load_config
 
-class TestWaifu(commands.Cog):
+class Waifu(commands.Cog):
     def __init__(self, client):
         self.client = client
 

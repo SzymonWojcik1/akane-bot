@@ -87,7 +87,7 @@ class PokemonPacks(commands.Cog):
             pass  # Ignore l'erreur si le message est déjà supprimé
 
     # Gestion des erreurs de cooldown
-    @test.error
+    @pokemon.error
     async def test_error(self, ctx, error):
         if isinstance(error, CommandOnCooldown):
             await ctx.reply(f"Tu dois attendre encore {round(error.retry_after, 1)} secondes avant de réessayer.")
