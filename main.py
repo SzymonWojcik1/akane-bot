@@ -2,7 +2,7 @@ import discord
 from discord.ext import commands
 import json
 import asyncio
-from utils.config_loader import load_config
+from utils.file_utils import load_config
 from cogs.waifu_gamble import Waifu
 from cogs.pokemon_gamble import PokemonPacks
 

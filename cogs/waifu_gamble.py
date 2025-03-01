@@ -2,11 +2,24 @@ import requests
 import json
 from discord.ext import commands
 from discord.ext.commands import CommandOnCooldown
-from utils.config_loader import load_config
+from utils.file_utils import load_config, load_data, join_user
 
 class Waifu(commands.Cog):
     def __init__(self, client):
         self.client = client
+
+    @commands.command()
+    async def joinwaifu(self, ctx):
+        waifu_file = 'data/users_waifus.json'
+
+        users_waifu = load_data(waifu_file)
+        user = str(ctx.author)
+        success = join_user(user, users_waifu, waifu_file)
+
+        if success :
+            await ctx.reply(f"{ctx.author.name}, vous avez été ajouté à la base de données des waifus")
+        else:
+            await ctx.reply(f"{ctx.author.name}, vous êtes déjà dans la base de données des waifus")
 
     @commands.command()
     @commands.cooldown(1, 180, commands.BucketType.user)
