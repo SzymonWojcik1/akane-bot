@@ -14,17 +14,26 @@ def load_config(filename='config.json'):
         return None
 
 def load_data(filename):
-    if os.path.exists(filename):
-        try:
-            with open(filename, 'r') as f:
-                return json.load(f)
-        except json.JSONDecodeError:
-            return{}
-    else:
-        return{}
+    filepath = os.path.join("data", filename)
+
+    os.makedirs("data", exist_ok=True)
+
+    if not os.path.exists(filepath):
+        with open(filepath, 'w') as f:
+            json.dump({}, f)
+        return {}
+
+    try:
+        with open(filepath, 'r') as f:
+            return json.load(f)
+    except json.JSONDecodeError:
+        return {}
 
 def save_data(data, filename):
-    with open(filename, 'w') as f:
+    filepath = os.path.join("data", filename)
+    os.makedirs("data", exist_ok=True)
+
+    with open(filepath, 'w') as f:
         json.dump(data, f, ensure_ascii=False, indent=4)
 
 def join_user(user, data, filename):

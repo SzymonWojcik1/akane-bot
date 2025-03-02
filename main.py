@@ -11,7 +11,14 @@ from cogs.help import Help
 
 intents = discord.Intents.default()
 intents.message_content = True
-client = commands.Bot(command_prefix="!", intents=intents)
+client = commands.Bot(command_prefix="!", intents=intents, help_command=None)
+
+@client.event
+async def on_ready():
+    activity = discord.Game(name="!help pour de l'aide")
+    await client.change_presence(activity=activity)
+    print(f"{client.user} est connecté !")
+
 
 async def main():
     config = load_config()

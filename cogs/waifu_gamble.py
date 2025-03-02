@@ -1,8 +1,10 @@
 import requests
 import json
+import discord
 from discord.ext import commands
 from discord.ext.commands import CommandOnCooldown
 from utils.file_utils import load_config, load_data, join_user
+import asyncio
 
 class Waifu(commands.Cog):
     def __init__(self, client):
@@ -10,7 +12,7 @@ class Waifu(commands.Cog):
 
     @commands.command()
     async def joinwaifu(self, ctx):
-        waifu_file = 'data/users_waifus.json'
+        waifu_file = 'users_waifus.json'
 
         users_waifu = load_data(waifu_file)
         user = str(ctx.author)
@@ -25,7 +27,7 @@ class Waifu(commands.Cog):
     @commands.cooldown(1, 180, commands.BucketType.user)
     async def waifu(self, ctx):
         # Charger les données des waifus
-        users_waifus = load_data('data/users_waifus.json')
+        users_waifus = load_data('users_waifus.json')
 
         # Vérifier si l'utilisateur est dans la base de données
         user_id = str(ctx.author)
@@ -53,16 +55,41 @@ class Waifu(commands.Cog):
             image_url = data.get('image', {}).get('large', 'Image non disponible')
             title_romaji = data.get('media', {}).get('nodes', [{}])[0].get('title', {}).get('romaji', 'Titre romaji non disponible')
 
-            # Créer le message à envoyer
-            message = f"**Nom complet :** {name_full}\n" \
-                      f"**Image :** [Clique ici pour voir l'image]({image_url})\n" \
-                      f"**Titre (Romaji) :** {title_romaji}"
+            embed = discord.Embed(title=name_full, description=f"De : {title_romaji}", color=discord.Color.pink())
+            embed.set_image(url=image_url)
 
-            # Répondre au message d'origine de l'utilisateur (ctx.reply)
-            await ctx.reply(message)
+            message = await ctx.reply(embed=embed)
+
+            # Créer le message à envoyer
+            await message.add_reaction("💖")
+            await message.add_reaction("❌")
+
+            def check(reaction, user):
+                return user == ctx.author and str(reaction.emoji) in ["💖","❌"]
+
+            try:
+                reaction, user = await self.client.wait_for("reaction_add", timeout=60.0, check=check)
+
+                if str(reaction.emoji) == "💖":
+                    await ctx.send(f"{ctx.author.name} test")
+                    await message.clear_reactions()
+                    pass
+                elif str(reaction.emoji) == "❌":
+                    await ctx.send(f"Pass")
+                    await message.clear_reactions()
+                    pass
+
+
+            except asyncio.TimeoutError:
+                await message.clear_reactions()
+                pass  # Ne rien faire si personne ne réagit
 
         else:
             await ctx.reply(f"Erreur lors de la récupération de la waifu. Code : {response.status_code}")
+
+
+            # Répondre au message d'origine de l'utilisateur (ctx.reply)
+            await ctx.reply(message)
 
     @waifu.error
     async def waifu_error(self, ctx, error):
