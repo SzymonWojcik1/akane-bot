@@ -5,3 +5,7 @@ venv/
 
 # ignore files in data
 data/*
+
+.DS_Store
+
+**/.DS_Store
