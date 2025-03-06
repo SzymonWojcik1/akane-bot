@@ -3,7 +3,6 @@ from discord.ext import commands
 import json
 import asyncio
 from utils.file_utils import load_config
-from cogs.waifu_gamble import Waifu
 from cogs.pokemon_gamble import PokemonPacks
 from cogs.help import Help
 
@@ -25,7 +24,6 @@ async def main():
     discord_token = config.get('discord_bot_token')
 
     await client.add_cog(PokemonPacks(client))
-    await client.add_cog(Waifu(client))
     await client.add_cog(Help(client))
 
     await client.start(discord_token)
