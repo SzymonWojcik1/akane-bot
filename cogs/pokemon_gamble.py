@@ -1,4 +1,3 @@
-from discord import app_commands
 from discord.ext import commands
 import os
 import random
@@ -101,8 +100,8 @@ class PokemonPacks(commands.Cog):
         # return pulled_cards
 
 
-    @app_commands.command(name="baseset", description="Ouvre un pack pokemon.")
-    @app_commands.checks.cooldown(1, 180)
+    @commands.command(name="baseset", description="Ouvre un pack pokemon.")
+    @commands.checks.cooldown(1, 180, commands.BucketType.user)
     async def baseset(self, ctx):
         """
         Open a pack cards with rarities ditributed between common, uncommon, rare and holo
