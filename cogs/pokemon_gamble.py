@@ -1,3 +1,4 @@
+from discord import app_commands
 from discord.ext import commands
 import os
 import random
@@ -42,40 +43,66 @@ class PokemonPacks(commands.Cog):
 
     async def display_cards(self, ctx, pack, rarities):
         """
-        Opens the pack and shows the cards to the user with a discord message
-        It shows the image and name of the card while changing every 2 seconds to go on the next card
-        at the end it shows every card drawn
+        Opens the pack and shows the cards to the user with a discord message.
+        It shows the image and name of the card while changing every 2 seconds to go on the next card.
+        At the end, it shows every card drawn.
 
         Args:
-            ctx (commands.Context): execution context, can manipulate a discord message
-            pack(list): A list of paths to the cards to print
-            rarities (list): A list of the rarities of the cards to display to the user
+            ctx (commands.Context): Execution context, can manipulate a discord message.
+            pack (list): A list of paths to the cards to print.
+            rarities (list): A list of the rarities of the cards to display to the user.
         """
         display_message = await ctx.reply("🎁 **Ouverture du pack...** 🎉")
         await asyncio.sleep(2)
 
-        card_info = []  # Pour stocker les informations sur les cartes (nom et rareté)
+        card_info = []  # Stores formatted card names (for display only)
+        pulled_cards = []  # Stores raw card names (for tracking purposes)
+        rarity_colors = {
+            "common": discord.Color.green(),
+            "uncommon": discord.Color.blue(),
+            "rare": discord.Color.purple(),
+            "holo": discord.Color.gold()
+        }
 
         for i, (img, rarity) in enumerate(zip(pack, rarities), start=1):
-            # Extraire le nom de la carte depuis le fichier (sans l'extension .jpg)
-            card_name = os.path.basename(img).replace(".jpg", "")
-            card_info.append(f"{card_name} ({rarity})")
+            # Extract and format the card name
+            raw_card_name = os.path.basename(img).replace(".jpg", "")
+            pulled_cards.append(f"{raw_card_name} ({rarity})")  # Keep raw format for tracking
 
+            formatted_card_name = raw_card_name.replace("_", " ").capitalize()
+            card_info.append(f"{formatted_card_name} ({rarity})")
+
+            # Create a Discord file from the image path
             file = discord.File(img)
-            await display_message.edit(content=f"📜 **Carte {i}/{len(pack)} :** {card_name} ({rarity})", attachments=[file])
+
+
+            # Create an embed message
+            embed = discord.Embed(
+                title=f"📜 Carte {i}/{len(pack)}",
+                description=f"**Nom:** {formatted_card_name}\n**Rareté:** {rarity}",
+                color=rarity_colors.get(rarity)
+            )
+            embed.set_image(url=f"attachment://{os.path.basename(img)}")  # Attach the image
+
+            # Edit the message to show the embed instead
+            await display_message.edit(content=None, embed=embed, attachments=[file])
             await asyncio.sleep(2)
 
-        # Ajouter un message avec les noms des cartes et leur rareté
-        await display_message.edit(content=f"Voici les cartes que tu as obtenues :\n" + "\n".join(card_info))
+        # Final new message with all drawn cards
+        embed_final = discord.Embed(
+            title="🎉 Pack Ouvert !",
+            description="Voici les cartes que tu as obtenues :\n" + "\n".join(card_info),
+            color=discord.Color.red()
+        )
+        # New message
+        await ctx.reply(content=None, embed=embed_final)
 
-        await asyncio.sleep(max(0, 120 - (2 * len(pack))))
-        try:
-            await display_message.delete()
-        except discord.NotFound:
-            pass
+        # Possible return with the name of the files
+        # return pulled_cards
 
-    @commands.command()
-    @commands.cooldown(1, 180, commands.BucketType.user)
+
+    @app_commands.command(name="baseset", description="Ouvre un pack pokemon.")
+    @app_commands.checks.cooldown(1, 180)
     async def baseset(self, ctx):
         """
         Open a pack cards with rarities ditributed between common, uncommon, rare and holo

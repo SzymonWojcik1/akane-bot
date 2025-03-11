@@ -1,16 +1,28 @@
+from discord import app_commands
 from discord.ext import commands
-from discord.ext.commands import CommandOnCooldown
 
 class Help(commands.Cog):
     def __init__(self, client):
         self.client = client
-
-    @commands.command()
+    @app_commands.command(name="help", description="Get Help")
     async def help(self, ctx):
+        """
+        When the user types !help, it provides a list of commands while explaining what they do
+
+        Args:
+            ctx : context command, used here to reply to the user with a discord message
+        """
         help_message = (
             "**Commandes disponibles :**\n\n"
-            "**!pokemon** : Ouvre un pack Pokémon.\n"
+            "**!help** : Affiche les commandes du bot\n\n"
+            "**!verison** : Affiche la version du bot\n\n"
+            "**!baseset** : Ouvre un pack Pokémon du set de base.\n"
             "Utilisez cette commande pour ouvrir un pack Pokemon.\n\n"
             "Chaque commande est disponible avec un délai de 180 secondes entre les utilisations (cooldown)."
         )
-        await ctx.reply(help_message)
+        await ctx.respond(help_message)
+
+    @app_commands.command(name="version", description="Get the version of the bot")
+    async def version(self, ctx):
+        version = "1.0.0"
+        await ctx.respond(f"Version du bot : {version}")
