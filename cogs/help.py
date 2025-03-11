@@ -3,7 +3,7 @@ from discord.ext import commands
 class Help(commands.Cog):
     def __init__(self, client):
         self.client = client
-    @commands.command(name="help", description="Get Help")
+    @commands.command()
     async def help(self, ctx):
         """
         When the user types !help, it provides a list of commands while explaining what they do
@@ -21,7 +21,7 @@ class Help(commands.Cog):
         )
         await ctx.reply(help_message)
 
-    @commands.command(name="version", description="Get the version of the bot")
+    @commands.command()
     async def version(self, ctx):
         version = "1.0.0"
         await ctx.reply(f"Version du bot : {version}")

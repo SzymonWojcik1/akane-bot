@@ -11,14 +11,14 @@ from cogs.help import Help
 
 intents = discord.Intents.default()
 intents.message_content = True
-client = commands.Bot(command_prefix="/", intents=intents, help_command=None) # help_command makes it possible to name my help -> help
+client = commands.Bot(command_prefix="!", intents=intents, help_command=None) # help_command makes it possible to name my help -> help
 
 @client.event
 async def on_ready():
     """
     On start up, changes the message under the bot name to diplay "!help..."
     """
-    activity = discord.Game(name="/help pour voir les commandes")
+    activity = discord.Game(name="!help pour voir les commandes")
     await client.change_presence(activity=activity)
     print(f"{client.user} est connecté !")
     await client.tree.sync()

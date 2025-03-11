@@ -100,8 +100,8 @@ class PokemonPacks(commands.Cog):
         # return pulled_cards
 
 
-    @commands.command(name="baseset", description="Ouvre un pack pokemon.")
-    @commands.checks.cooldown(1, 180, commands.BucketType.user)
+    @commands.command()
+    @commands.cooldown(1, 180, commands.BucketType.user)
     async def baseset(self, ctx):
         """
         Open a pack cards with rarities ditributed between common, uncommon, rare and holo
