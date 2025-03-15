@@ -3,6 +3,8 @@ config.json
 # ignore venv folder
 venv/
 
+data/user_pokedex/base_set/base_set.json
+
 .DS_Store
 
 **/.DS_Store
