@@ -45,10 +45,10 @@ def generate_json_file(output_file, base_path, rarities):
   """
   Function to generate the cards and save them in a json file
 
-  :Args output_file: path to where json file will be generated
-  :Args base_path:
-  :Args rarities:
-  :Args version:
+  :Args
+    output_file: path to where json file will be generated
+    base_path: path where the images are
+    rarities: the names of the folders that are seperated by rarities
   """
   # Args
 
