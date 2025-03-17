@@ -4,6 +4,7 @@ import json
 import random
 import discord
 import asyncio
+from utils.handle_users_json import handle_user_json, increment_packs_opened
 
 class PokemonPacks(commands.Cog):
     def __init__(self, client):
@@ -102,6 +103,13 @@ class PokemonPacks(commands.Cog):
         Displays the drawn cards and their rarities to the user.
         Args: ctx (commands.Context): The context of the command execution to reply in discord
         """
+        user_id = str(ctx.author)
+        path = "data/user_pokedex/"
+        users_file = "users_base_set.json"
+        cards_path = "data/pokemon_sets_default/base_set.json"
+        handle_user_json(user_id, path, users_file, cards_path)
+        increment_packs_opened(user_id, path, users_file)
+
         pack_ids = []  # List to store the path of the drawn cards
         rarities = []  # List of rarities of the drawn cards
         drawn_cards = set()  # A set to track the cards already drawn

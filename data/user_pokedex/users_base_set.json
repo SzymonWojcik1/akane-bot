@@ -1,0 +1,723 @@
+{
+    "ss2arka": {
+        "packs_opened": 2,
+        "base_set": {
+            "cards": [
+                {
+                    "id": 1,
+                    "name": "soporifik",
+                    "rarity": "common",
+                    "image": "assets/pokemon_cartes/base_set/common/soporifik.jpg",
+                    "owned": false
+                },
+                {
+                    "id": 2,
+                    "name": "sabelette",
+                    "rarity": "common",
+                    "image": "assets/pokemon_cartes/base_set/common/sabelette.jpg",
+                    "owned": false
+                },
+                {
+                    "id": 3,
+                    "name": "carapuce",
+                    "rarity": "common",
+                    "image": "assets/pokemon_cartes/base_set/common/carapuce.jpg",
+                    "owned": false
+                },
+                {
+                    "id": 4,
+                    "name": "stari",
+                    "rarity": "common",
+                    "image": "assets/pokemon_cartes/base_set/common/stari.jpg",
+                    "owned": false
+                },
+                {
+                    "id": 5,
+                    "name": "machoc",
+                    "rarity": "common",
+                    "image": "assets/pokemon_cartes/base_set/common/machoc.jpg",
+                    "owned": false
+                },
+                {
+                    "id": 6,
+                    "name": "suppression_energie",
+                    "rarity": "common",
+                    "image": "assets/pokemon_cartes/base_set/common/suppression_energie.jpg",
+                    "owned": false
+                },
+                {
+                    "id": 7,
+                    "name": "energie_electrique",
+                    "rarity": "common",
+                    "image": "assets/pokemon_cartes/base_set/common/energie_electrique.jpg",
+                    "owned": false
+                },
+                {
+                    "id": 8,
+                    "name": "potion",
+                    "rarity": "common",
+                    "image": "assets/pokemon_cartes/base_set/common/potion.jpg",
+                    "owned": false
+                },
+                {
+                    "id": 9,
+                    "name": "pikachu",
+                    "rarity": "common",
+                    "image": "assets/pokemon_cartes/base_set/common/pikachu.jpg",
+                    "owned": false
+                },
+                {
+                    "id": 10,
+                    "name": "energie_eau",
+                    "rarity": "common",
+                    "image": "assets/pokemon_cartes/base_set/common/energie_eau.jpg",
+                    "owned": false
+                },
+                {
+                    "id": 11,
+                    "name": "abra",
+                    "rarity": "common",
+                    "image": "assets/pokemon_cartes/base_set/common/abra.jpg",
+                    "owned": false
+                },
+                {
+                    "id": 12,
+                    "name": "energie_psy",
+                    "rarity": "common",
+                    "image": "assets/pokemon_cartes/base_set/common/energie_psy.jpg",
+                    "owned": false
+                },
+                {
+                    "id": 13,
+                    "name": "leo",
+                    "rarity": "common",
+                    "image": "assets/pokemon_cartes/base_set/common/leo.jpg",
+                    "owned": false
+                },
+                {
+                    "id": 14,
+                    "name": "energie_plante",
+                    "rarity": "common",
+                    "image": "assets/pokemon_cartes/base_set/common/energie_plante.jpg",
+                    "owned": false
+                },
+                {
+                    "id": 15,
+                    "name": "bulbizarre",
+                    "rarity": "common",
+                    "image": "assets/pokemon_cartes/base_set/common/bulbizarre.jpg",
+                    "owned": false
+                },
+                {
+                    "id": 16,
+                    "name": "magneti",
+                    "rarity": "common",
+                    "image": "assets/pokemon_cartes/base_set/common/magneti.jpg",
+                    "owned": false
+                },
+                {
+                    "id": 17,
+                    "name": "chenipan",
+                    "rarity": "common",
+                    "image": "assets/pokemon_cartes/base_set/common/chenipan.jpg",
+                    "owned": false
+                },
+                {
+                    "id": 18,
+                    "name": "goupix",
+                    "rarity": "common",
+                    "image": "assets/pokemon_cartes/base_set/common/goupix.jpg",
+                    "owned": false
+                },
+                {
+                    "id": 19,
+                    "name": "rafale_vent",
+                    "rarity": "common",
+                    "image": "assets/pokemon_cartes/base_set/common/rafale_vent.jpg",
+                    "owned": false
+                },
+                {
+                    "id": 20,
+                    "name": "rattata",
+                    "rarity": "common",
+                    "image": "assets/pokemon_cartes/base_set/common/rattata.jpg",
+                    "owned": false
+                },
+                {
+                    "id": 21,
+                    "name": "salameche",
+                    "rarity": "common",
+                    "image": "assets/pokemon_cartes/base_set/common/salameche.jpg",
+                    "owned": false
+                },
+                {
+                    "id": 22,
+                    "name": "smogo",
+                    "rarity": "common",
+                    "image": "assets/pokemon_cartes/base_set/common/smogo.jpg",
+                    "owned": false
+                },
+                {
+                    "id": 23,
+                    "name": "transfert",
+                    "rarity": "common",
+                    "image": "assets/pokemon_cartes/base_set/common/transfert.jpg",
+                    "owned": false
+                },
+                {
+                    "id": 24,
+                    "name": "ptitard",
+                    "rarity": "common",
+                    "image": "assets/pokemon_cartes/base_set/common/ptitard.jpg",
+                    "owned": false
+                },
+                {
+                    "id": 25,
+                    "name": "energie_combat",
+                    "rarity": "common",
+                    "image": "assets/pokemon_cartes/base_set/common/energie_combat.jpg",
+                    "owned": false
+                },
+                {
+                    "id": 26,
+                    "name": "ponyta",
+                    "rarity": "common",
+                    "image": "assets/pokemon_cartes/base_set/common/ponyta.jpg",
+                    "owned": false
+                },
+                {
+                    "id": 27,
+                    "name": "saquedeneu",
+                    "rarity": "common",
+                    "image": "assets/pokemon_cartes/base_set/common/saquedeneu.jpg",
+                    "owned": false
+                },
+                {
+                    "id": 28,
+                    "name": "onix",
+                    "rarity": "common",
+                    "image": "assets/pokemon_cartes/base_set/common/onix.jpg",
+                    "owned": false
+                },
+                {
+                    "id": 29,
+                    "name": "voltorbe",
+                    "rarity": "common",
+                    "image": "assets/pokemon_cartes/base_set/common/voltorbe.jpg",
+                    "owned": false
+                },
+                {
+                    "id": 30,
+                    "name": "fantominus",
+                    "rarity": "common",
+                    "image": "assets/pokemon_cartes/base_set/common/fantominus.jpg",
+                    "owned": false
+                },
+                {
+                    "id": 31,
+                    "name": "doduo",
+                    "rarity": "common",
+                    "image": "assets/pokemon_cartes/base_set/common/doduo.jpg",
+                    "owned": false
+                },
+                {
+                    "id": 32,
+                    "name": "taupiqueur",
+                    "rarity": "common",
+                    "image": "assets/pokemon_cartes/base_set/common/taupiqueur.jpg",
+                    "owned": false
+                },
+                {
+                    "id": 33,
+                    "name": "nidoran_male",
+                    "rarity": "common",
+                    "image": "assets/pokemon_cartes/base_set/common/nidoran_male.jpg",
+                    "owned": false
+                },
+                {
+                    "id": 34,
+                    "name": "energie_feu",
+                    "rarity": "common",
+                    "image": "assets/pokemon_cartes/base_set/common/energie_feu.jpg",
+                    "owned": false
+                },
+                {
+                    "id": 35,
+                    "name": "roucool",
+                    "rarity": "common",
+                    "image": "assets/pokemon_cartes/base_set/common/roucool.jpg",
+                    "owned": false
+                },
+                {
+                    "id": 36,
+                    "name": "chrysacier",
+                    "rarity": "common",
+                    "image": "assets/pokemon_cartes/base_set/common/chrysacier.jpg",
+                    "owned": false
+                },
+                {
+                    "id": 37,
+                    "name": "staross",
+                    "rarity": "common",
+                    "image": "assets/pokemon_cartes/base_set/common/staross.jpg",
+                    "owned": false
+                },
+                {
+                    "id": 38,
+                    "name": "aspicot",
+                    "rarity": "common",
+                    "image": "assets/pokemon_cartes/base_set/common/aspicot.jpg",
+                    "owned": false
+                },
+                {
+                    "id": 39,
+                    "name": "porygon",
+                    "rarity": "uncommon",
+                    "image": "assets/pokemon_cartes/base_set/uncommon/porygon.jpg",
+                    "owned": false
+                },
+                {
+                    "id": 40,
+                    "name": "lamantine",
+                    "rarity": "uncommon",
+                    "image": "assets/pokemon_cartes/base_set/uncommon/lamantine.jpg",
+                    "owned": false
+                },
+                {
+                    "id": 41,
+                    "name": "double_energie",
+                    "rarity": "uncommon",
+                    "image": "assets/pokemon_cartes/base_set/uncommon/double_energie.jpg",
+                    "owned": false
+                },
+                {
+                    "id": 42,
+                    "name": "reptincel",
+                    "rarity": "uncommon",
+                    "image": "assets/pokemon_cartes/base_set/uncommon/reptincel.jpg",
+                    "owned": false
+                },
+                {
+                    "id": 43,
+                    "name": "arcanin",
+                    "rarity": "uncommon",
+                    "image": "assets/pokemon_cartes/base_set/uncommon/arcanin.jpg",
+                    "owned": false
+                },
+                {
+                    "id": 44,
+                    "name": "magicarpe",
+                    "rarity": "uncommon",
+                    "image": "assets/pokemon_cartes/base_set/uncommon/magicarpe.jpg",
+                    "owned": false
+                },
+                {
+                    "id": 45,
+                    "name": "coconfort",
+                    "rarity": "uncommon",
+                    "image": "assets/pokemon_cartes/base_set/uncommon/coconfort.jpg",
+                    "owned": false
+                },
+                {
+                    "id": 46,
+                    "name": "nidorino",
+                    "rarity": "uncommon",
+                    "image": "assets/pokemon_cartes/base_set/uncommon/nidorino.jpg",
+                    "owned": false
+                },
+                {
+                    "id": 47,
+                    "name": "kadabra",
+                    "rarity": "uncommon",
+                    "image": "assets/pokemon_cartes/base_set/uncommon/kadabra.jpg",
+                    "owned": false
+                },
+                {
+                    "id": 48,
+                    "name": "rattatac",
+                    "rarity": "uncommon",
+                    "image": "assets/pokemon_cartes/base_set/uncommon/rattatac.jpg",
+                    "owned": false
+                },
+                {
+                    "id": 49,
+                    "name": "professeur_chen",
+                    "rarity": "uncommon",
+                    "image": "assets/pokemon_cartes/base_set/uncommon/professeur_chen.jpg",
+                    "owned": false
+                },
+                {
+                    "id": 50,
+                    "name": "carabaffe",
+                    "rarity": "uncommon",
+                    "image": "assets/pokemon_cartes/base_set/uncommon/carabaffe.jpg",
+                    "owned": false
+                },
+                {
+                    "id": 51,
+                    "name": "herbizarre",
+                    "rarity": "uncommon",
+                    "image": "assets/pokemon_cartes/base_set/uncommon/herbizarre.jpg",
+                    "owned": false
+                },
+                {
+                    "id": 52,
+                    "name": "sauvegarde_energie",
+                    "rarity": "uncommon",
+                    "image": "assets/pokemon_cartes/base_set/uncommon/sauvegarde_energie.jpg",
+                    "owned": false
+                },
+                {
+                    "id": 53,
+                    "name": "flute_pokemon",
+                    "rarity": "uncommon",
+                    "image": "assets/pokemon_cartes/base_set/uncommon/flute_pokemon.jpg",
+                    "owned": false
+                },
+                {
+                    "id": 54,
+                    "name": "entretien",
+                    "rarity": "uncommon",
+                    "image": "assets/pokemon_cartes/base_set/uncommon/entretien.jpg",
+                    "owned": false
+                },
+                {
+                    "id": 55,
+                    "name": "spectrum",
+                    "rarity": "uncommon",
+                    "image": "assets/pokemon_cartes/base_set/uncommon/spectrum.jpg",
+                    "owned": false
+                },
+                {
+                    "id": 56,
+                    "name": "pokedex",
+                    "rarity": "uncommon",
+                    "image": "assets/pokemon_cartes/base_set/uncommon/pokedex.jpg",
+                    "owned": false
+                },
+                {
+                    "id": 57,
+                    "name": "lippoutou",
+                    "rarity": "uncommon",
+                    "image": "assets/pokemon_cartes/base_set/uncommon/lippoutou.jpg",
+                    "owned": false
+                },
+                {
+                    "id": 58,
+                    "name": "centre_pokemon",
+                    "rarity": "uncommon",
+                    "image": "assets/pokemon_cartes/base_set/uncommon/centre_pokemon.jpg",
+                    "owned": false
+                },
+                {
+                    "id": 59,
+                    "name": "machopeur",
+                    "rarity": "uncommon",
+                    "image": "assets/pokemon_cartes/base_set/uncommon/machopeur.jpg",
+                    "owned": false
+                },
+                {
+                    "id": 60,
+                    "name": "otaria",
+                    "rarity": "uncommon",
+                    "image": "assets/pokemon_cartes/base_set/uncommon/otaria.jpg",
+                    "owned": false
+                },
+                {
+                    "id": 61,
+                    "name": "canarticho",
+                    "rarity": "uncommon",
+                    "image": "assets/pokemon_cartes/base_set/uncommon/canarticho.jpg",
+                    "owned": false
+                },
+                {
+                    "id": 62,
+                    "name": "reanimation",
+                    "rarity": "uncommon",
+                    "image": "assets/pokemon_cartes/base_set/uncommon/reanimation.jpg",
+                    "owned": false
+                },
+                {
+                    "id": 63,
+                    "name": "caninos",
+                    "rarity": "uncommon",
+                    "image": "assets/pokemon_cartes/base_set/uncommon/caninos.jpg",
+                    "owned": false
+                },
+                {
+                    "id": 64,
+                    "name": "minidraco",
+                    "rarity": "uncommon",
+                    "image": "assets/pokemon_cartes/base_set/uncommon/minidraco.jpg",
+                    "owned": false
+                },
+                {
+                    "id": 65,
+                    "name": "magmar",
+                    "rarity": "uncommon",
+                    "image": "assets/pokemon_cartes/base_set/uncommon/magmar.jpg",
+                    "owned": false
+                },
+                {
+                    "id": 66,
+                    "name": "tetarte",
+                    "rarity": "uncommon",
+                    "image": "assets/pokemon_cartes/base_set/uncommon/tetarte.jpg",
+                    "owned": false
+                },
+                {
+                    "id": 67,
+                    "name": "guerison_totale",
+                    "rarity": "uncommon",
+                    "image": "assets/pokemon_cartes/base_set/uncommon/guerison_totale.jpg",
+                    "owned": false
+                },
+                {
+                    "id": 68,
+                    "name": "pluspower",
+                    "rarity": "uncommon",
+                    "image": "assets/pokemon_cartes/base_set/uncommon/pluspower.jpg",
+                    "owned": false
+                },
+                {
+                    "id": 69,
+                    "name": "super_potion",
+                    "rarity": "uncommon",
+                    "image": "assets/pokemon_cartes/base_set/uncommon/super_potion.jpg",
+                    "owned": false
+                },
+                {
+                    "id": 70,
+                    "name": "defender",
+                    "rarity": "uncommon",
+                    "image": "assets/pokemon_cartes/base_set/uncommon/defender.jpg",
+                    "owned": false
+                },
+                {
+                    "id": 71,
+                    "name": "roucoups",
+                    "rarity": "rare",
+                    "image": "assets/pokemon_cartes/base_set/rare/roucoups.jpg",
+                    "owned": false
+                },
+                {
+                    "id": 72,
+                    "name": "recherche_informatique",
+                    "rarity": "rare",
+                    "image": "assets/pokemon_cartes/base_set/rare/recherche_informatique.jpg",
+                    "owned": false
+                },
+                {
+                    "id": 73,
+                    "name": "triopikeur",
+                    "rarity": "rare",
+                    "image": "assets/pokemon_cartes/base_set/rare/triopikeur.jpg",
+                    "owned": false
+                },
+                {
+                    "id": 74,
+                    "name": "elektek",
+                    "rarity": "rare",
+                    "image": "assets/pokemon_cartes/base_set/rare/elektek.jpg",
+                    "owned": false
+                },
+                {
+                    "id": 75,
+                    "name": "dardagnan",
+                    "rarity": "rare",
+                    "image": "assets/pokemon_cartes/base_set/rare/dardagnan.jpg",
+                    "owned": false
+                },
+                {
+                    "id": 76,
+                    "name": "rappel",
+                    "rarity": "rare",
+                    "image": "assets/pokemon_cartes/base_set/rare/rappel.jpg",
+                    "owned": false
+                },
+                {
+                    "id": 77,
+                    "name": "fillette",
+                    "rarity": "rare",
+                    "image": "assets/pokemon_cartes/base_set/rare/fillette.jpg",
+                    "owned": false
+                },
+                {
+                    "id": 78,
+                    "name": "eleveur_pokemon",
+                    "rarity": "rare",
+                    "image": "assets/pokemon_cartes/base_set/rare/eleveur_pokemon.jpg",
+                    "owned": false
+                },
+                {
+                    "id": 79,
+                    "name": "vaporisateur_retrograde",
+                    "rarity": "rare",
+                    "image": "assets/pokemon_cartes/base_set/rare/vaporisateur_retrograde.jpg",
+                    "owned": false
+                },
+                {
+                    "id": 80,
+                    "name": "faux_professeur_chen",
+                    "rarity": "rare",
+                    "image": "assets/pokemon_cartes/base_set/rare/faux_professeur_chen.jpg",
+                    "owned": false
+                },
+                {
+                    "id": 81,
+                    "name": "draco",
+                    "rarity": "rare",
+                    "image": "assets/pokemon_cartes/base_set/rare/draco.jpg",
+                    "owned": false
+                },
+                {
+                    "id": 82,
+                    "name": "double_suppression_energie",
+                    "rarity": "rare",
+                    "image": "assets/pokemon_cartes/base_set/rare/double_suppression_energie.jpg",
+                    "owned": false
+                },
+                {
+                    "id": 83,
+                    "name": "marchand_pokemon",
+                    "rarity": "rare",
+                    "image": "assets/pokemon_cartes/base_set/rare/marchand_pokemon.jpg",
+                    "owned": false
+                },
+                {
+                    "id": 84,
+                    "name": "peluche_melofee",
+                    "rarity": "rare",
+                    "image": "assets/pokemon_cartes/base_set/rare/peluche_melofee.jpg",
+                    "owned": false
+                },
+                {
+                    "id": 85,
+                    "name": "recuperateur",
+                    "rarity": "rare",
+                    "image": "assets/pokemon_cartes/base_set/rare/recuperateur.jpg",
+                    "owned": false
+                },
+                {
+                    "id": 86,
+                    "name": "electrode",
+                    "rarity": "rare",
+                    "image": "assets/pokemon_cartes/base_set/rare/electrode.jpg",
+                    "owned": false
+                },
+                {
+                    "id": 87,
+                    "name": "alakazam",
+                    "rarity": "holo",
+                    "image": "assets/pokemon_cartes/base_set/holo/alakazam.jpg",
+                    "owned": false
+                },
+                {
+                    "id": 88,
+                    "name": "tortank",
+                    "rarity": "holo",
+                    "image": "assets/pokemon_cartes/base_set/holo/tortank.jpg",
+                    "owned": false
+                },
+                {
+                    "id": 89,
+                    "name": "nidoking",
+                    "rarity": "holo",
+                    "image": "assets/pokemon_cartes/base_set/holo/nidoking.jpg",
+                    "owned": false
+                },
+                {
+                    "id": 90,
+                    "name": "tygnon",
+                    "rarity": "holo",
+                    "image": "assets/pokemon_cartes/base_set/holo/tygnon.jpg",
+                    "owned": false
+                },
+                {
+                    "id": 91,
+                    "name": "mewtwo",
+                    "rarity": "holo",
+                    "image": "assets/pokemon_cartes/base_set/holo/mewtwo.jpg",
+                    "owned": false
+                },
+                {
+                    "id": 92,
+                    "name": "leveinard",
+                    "rarity": "holo",
+                    "image": "assets/pokemon_cartes/base_set/holo/leveinard.jpg",
+                    "owned": false
+                },
+                {
+                    "id": 93,
+                    "name": "electhor",
+                    "rarity": "holo",
+                    "image": "assets/pokemon_cartes/base_set/holo/electhor.jpg",
+                    "owned": false
+                },
+                {
+                    "id": 94,
+                    "name": "melofee",
+                    "rarity": "holo",
+                    "image": "assets/pokemon_cartes/base_set/holo/melofee.jpg",
+                    "owned": false
+                },
+                {
+                    "id": 95,
+                    "name": "magneton",
+                    "rarity": "holo",
+                    "image": "assets/pokemon_cartes/base_set/holo/magneton.jpg",
+                    "owned": false
+                },
+                {
+                    "id": 96,
+                    "name": "feunard",
+                    "rarity": "holo",
+                    "image": "assets/pokemon_cartes/base_set/holo/feunard.jpg",
+                    "owned": false
+                },
+                {
+                    "id": 97,
+                    "name": "mackogneur",
+                    "rarity": "holo",
+                    "image": "assets/pokemon_cartes/base_set/holo/mackogneur.jpg",
+                    "owned": false
+                },
+                {
+                    "id": 98,
+                    "name": "dracaufeu",
+                    "rarity": "holo",
+                    "image": "assets/pokemon_cartes/base_set/holo/dracaufeu.jpg",
+                    "owned": false
+                },
+                {
+                    "id": 99,
+                    "name": "tartard",
+                    "rarity": "holo",
+                    "image": "assets/pokemon_cartes/base_set/holo/tartard.jpg",
+                    "owned": false
+                },
+                {
+                    "id": 100,
+                    "name": "leviator",
+                    "rarity": "holo",
+                    "image": "assets/pokemon_cartes/base_set/holo/leviator.jpg",
+                    "owned": false
+                },
+                {
+                    "id": 101,
+                    "name": "raichu",
+                    "rarity": "holo",
+                    "image": "assets/pokemon_cartes/base_set/holo/raichu.jpg",
+                    "owned": false
+                },
+                {
+                    "id": 102,
+                    "name": "florizarre",
+                    "rarity": "holo",
+                    "image": "assets/pokemon_cartes/base_set/holo/florizarre.jpg",
+                    "owned": false
+                }
+            ]
+        }
+    }
+}
