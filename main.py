@@ -1,4 +1,5 @@
 import discord
+import os
 from discord.ext import commands
 from discord import app_commands
 import json
@@ -19,6 +20,32 @@ base_set_rarities = ["common", "uncommon", "rare", "holo"]
 base_set_output_file = "data/pokemon_sets_default/base_set.json"
 base_set_path = "assets/pokemon_cartes/base_set"
 
+
+@client.event
+async def on_message(message):
+    # Prevent the bot from resonding to itself
+    if message.author == client.user:
+        return
+
+    # Keywords to trigger the response
+    goodnight_keywords = ["good night", "gn", "bonne nuit"]
+
+    # Convert the message to lowercase
+    message_content = message.content.lower()
+
+    # Check if any of the keywords are in the message
+    if any(keyword in message_content for keyword in goodnight_keywords):
+        gif_path = "assets/other/gifs/kiss-a-homie-kiss.gif"
+
+        # Check if the file exists before sending
+        if os.path.exists(gif_path):
+            file = discord.File(gif_path)
+            await message.channel.send(f"Bonne nuit {message.author.mention} fait de beau rêve !", file=file)
+        else:
+            await message.channel.send(f"Bonne nuit {message.author.mention} fait de beau rêve ! (J'ai perdu le gif 😭)")
+
+    # Process other commands /!\ do not touch this line /!\
+    await client.process_commands(message)
 
 @client.event
 async def on_ready():
